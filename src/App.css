@@ -42,6 +42,16 @@ button:hover {
   background-color: #007bff; /* Blue color for the button */
 }
 
+.procees-to-checkout {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-left:30%;
+  border-radius: 30px;
+  width: 250px;
+  background-color: #2c44de; /* Blue color for the button */
+}
+
 .product-table {
   width: 100%;
   border-collapse: collapse;

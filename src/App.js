@@ -121,7 +121,7 @@ const App = () => {
                         <FaCartPlus />
                       </button>
                       <input 
-                      style={{ width: '50px' }}
+                      style={{ width: '70px' }}
                         type="checkbox" 
                         checked={!!selectedProducts[product.id]} 
                         onChange={() => handleCheckboxChange(product.id)} 

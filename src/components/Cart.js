@@ -47,14 +47,16 @@ const Cart = ({ cartItems }) => {
                   <div className="total-price">
                     <h3>Total: ${totalPrice.toFixed(2)}</h3>
                   </div>
+                  
+                  <button className="procees-to-checkout">
+                     PROCEED TO CHECKOUT
+                  </button>
                 </div>
             </div>
           )}
         </div>
 
-        <div className="empty-box">
-          {/* This box is currently empty */}
-        </div>
+        
       </div>
     </div>
   );
