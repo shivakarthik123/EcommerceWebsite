@@ -2,23 +2,23 @@ import React, { useState } from 'react';
 import { products } from './data/data';
 import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import Cart from './components/Cart';
-import './App.css'; // Ensure this is imported
-import { MdRefresh } from 'react-icons/md'; // Import reset icon
-import { FaCartPlus } from 'react-icons/fa'; // Import cart icon
+import './App.css'; 
+import { MdRefresh } from 'react-icons/md'; 
+import { FaCartPlus } from 'react-icons/fa'; 
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [selectedSize, setSelectedSize] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [cart, setCart] = useState([]);
-  const [selectedProducts, setSelectedProducts] = useState({}); // Keeps track of selected products
+  const [selectedProducts, setSelectedProducts] = useState({}); 
 
-  const sizes = ["All", "S", "M", "L", "XL"]; // Example sizes
+  const sizes = ["All", "S", "M", "L", "XL"]; 
 
   const handleCheckboxChange = (productId) => {
     setSelectedProducts(prev => ({
       ...prev,
-      [productId]: !prev[productId], // Toggle checkbox for the specific productId
+      [productId]: !prev[productId], 
     }));
   };
 
@@ -33,7 +33,7 @@ const App = () => {
     }, []);
     
     setCart(newCart);
-    setSelectedProducts({}); // Reset selections
+    setSelectedProducts({}); 
   };
 
   const handleReset = () => {
@@ -98,7 +98,7 @@ const App = () => {
                   <div className="column">Color</div>
                   <div className="column">Stock</div>
                   <div className="column">Price</div>
-                  <div className="column">Buy</div> {/* Combined column */}
+                  <div className="column">Buy</div>
                 </div>
                 {filteredProducts.map((product) => (
                   <div className="product-row" key={product.id}>
@@ -115,12 +115,13 @@ const App = () => {
                         min="1" 
                         id={`quantity-${product.id}`} 
                         defaultValue={1} 
-                        style={{ width: '50px' }} // Make the input box smaller
+                        style={{ width: '50px' }}
                       />
                       <button className="add-to-cart-btn" onClick={() => handleAddToCart(product.id)}>
                         <FaCartPlus />
                       </button>
                       <input 
+                      style={{ width: '50px' }}
                         type="checkbox" 
                         checked={!!selectedProducts[product.id]} 
                         onChange={() => handleCheckboxChange(product.id)} 
