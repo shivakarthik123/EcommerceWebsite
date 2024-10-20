@@ -61,6 +61,7 @@ const App = () => {
               <option value="Hoodies">Hoodies</option>
               <option value="Shirts">Shirts</option>
               <option value="Jeans">Jeans</option>
+              
             </select>
             <select onChange={(e) => setSelectedSize(e.target.value)}>
               {sizes.map(size => (
