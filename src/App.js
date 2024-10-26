@@ -79,6 +79,7 @@ const App = () => {
               value={searchQuery} 
               onChange={(e) => setSearchQuery(e.target.value)} 
             />
+            
             <Link to="/cart">
               <button className="go-to-cart" onClick={handleAddToCart}>
                 <FaCartPlus /> Add to Cart

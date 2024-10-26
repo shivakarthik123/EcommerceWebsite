@@ -130,7 +130,7 @@ export const products = [
     stock: "In Stock", 
   },
   {
-    id: "10",
+    id: "11",
     img: "https://rukminim2.flixcart.com/image/850/1000/ky7lci80/jean/r/k/a/6-7-years-3392-pin-stone-jeans-original-imagahktpu8zheuv.jpeg?q=90&crop=false",
     title: "Mens straigt pant",
     star: "★★★",
